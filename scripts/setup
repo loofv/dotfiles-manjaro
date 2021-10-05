@@ -1,0 +1,20 @@
+#!bin/sh
+# Update mirrors
+sudo pacman-mirrors --country Sweden,Norway,Germany,Finland && sudo pacman Syyu
+# Installs
+sudo pacman -S git i3-gaps i3status dmenu zsh fzf autotiling arandr zsh-syntax-highlighting nodejs npm feh compton neovim github-cli tk xclip
+sudo pacman -Fy gitk
+# Install-scripts
+sh install-alacritty
+sh install-vimplug
+sh install-ohmyzsh
+
+# Make directories, symlinks etc
+sh dirs
+sh symlinks
+
+# Setup github cli auth
+gh auth login
+
+echo "Install of loveh config finished."
+echo "Start vim, do pluginstall, restart computer and enjoy!"
