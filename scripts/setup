@@ -5,7 +5,7 @@ sudo pacman-mirrors --country Sweden,Norway,Germany,Finland && sudo pacman Syyu
 sudo pacman -S git i3-gaps i3status dmenu zsh fzf autotiling arandr zsh-syntax-highlighting nodejs npm feh compton neovim github-cli tk xclip ripgrep
 sudo pacman -Fy gitk
 # Install-scripts
-sh install-alacritty
+# sh install-alacritty
 sh install-vimplug
 sh install-ohmyzsh
 
@@ -17,4 +17,5 @@ sh symlinks
 gh auth login
 
 echo "Install of loveh config finished."
-echo "Start vim, do pluginstall, restart computer and enjoy!"
+echo "Alacritty script is not finished yet, so run that manually and fix any problems by hand."
+echo "After that, you can just start vim, do pluginstall, restart computer and enjoy!"
