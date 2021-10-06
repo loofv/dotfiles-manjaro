@@ -186,13 +186,6 @@ bindsym $mod+0 mode "$mode_system"
 set $Locker i3lock && sleep 1
 set $mode_system System (l) lock & suspend, (e) log out of window manager, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
-    # SK bindings, requires $Locker to be set.
-    # bindsym l exec --no-startup-id $Locker, mode "default"
-    # bindsym e exec --no-startup-id i3-msg exit, mode "default"
-    # bindsym s exec --no-startup-id $Locker && systemctl suspend, mode "default"
-    # bindsym h exec --no-startup-id $Locker && systemctl hibernate, mode "default"
-    # bindsym r exec --no-startup-id systemctl reboot, mode "default"
-    # bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"
     bindsym l exec --no-startup-id $Locker && systemctl suspend, mode "default"
     bindsym e exec --no-startup-id i3-msg exit, mode "default"
     bindsym r exec --no-startup-id systemctl reboot, mode "default"
@@ -211,10 +204,10 @@ bar {
 
 # Startup scripts
 exec_always ~/.custom_scripts/startup
-# exec_always ~/.custom_scripts/start-eclipse
 # exec teams
 exec google-chrome-stable
 exec --no-startup-id picom
+# exec alacritty
 exec_always --no-startup-id autotiling
 
 # This is to disable dim screen when inactive
