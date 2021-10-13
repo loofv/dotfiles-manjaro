@@ -2,18 +2,18 @@
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH="$HOME/.custom_scripts:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
-export ZSH="/home/loveh/.oh-my-zsh"
-ZSH_THEME="loveh-theme"
-source $ZSH/oh-my-zsh.sh
+# export ZSH="/home/loveh/.oh-my-zsh"
+# ZSH_THEME="loveh-theme"
+# source $ZSH/oh-my-zsh.sh
 
 # Uncomment the following line to automatically update without prompting.
-DISABLE_UPDATE_PROMPT="true"
+# DISABLE_UPDATE_PROMPT="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-COMPLETION_WAITING_DOTS="true"
+# COMPLETION_WAITING_DOTS="true"
 
 # Make command line branch load faster
-DISABLE_UNTRACKED_FILES_DIRTY="true"
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Read my aliases file
 . ~/.aliases
@@ -30,11 +30,13 @@ bindkey -v
 export KEYTIMEOUT=1
 
 # Use vim keys in tab complete menu:
-bindkey -M menuselect 'h' vi-backward-char
-bindkey -M menuselect 'k' vi-up-line-or-history
-bindkey -M menuselect 'l' vi-forward-char
-bindkey -M menuselect 'j' vi-down-line-or-history
-bindkey -v '^?' backward-delete-char
+# TODO FIX THESE AFTER REMOVAL OF OHMYZSH
+# If i even need them? do i use them?
+#bindkey -M menuselect 'h' vi-backward-char
+#bindkey -M menuselect 'k' vi-up-line-or-history
+#bindkey -M menuselect 'l' vi-forward-char
+#bindkey -M menuselect 'j' vi-down-line-or-history
+#bindkey -v '^?' backward-delete-char
 
 # Change cursor shape for different vi modes.
 function zle-keymap-select {
@@ -62,5 +64,19 @@ export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow -g "!**/{bu
 # Automatically add fzf key bindings to .zshrc
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
+
+# PROMPT
+function parse_git_branch() {
+    git branch 2> /dev/null | sed -n -e 's/^\* \(.*\)/[\1]/p'
+}
+autoload -U colors && colors
+setopt PROMPT_SUBST
+
+COLOR_DIR="%{$fg[cyan]%}";
+COLOR_GIT="%{$fg_bold[yellow]%}"
+COLOR_ARROW="%(?:%{$fg_bold[green]%}:%{$fg_bold[red]%})"
+
+export PROMPT=' ${COLOR_DIR}%1~ ${COLOR_GIT}$(parse_git_branch)${COLOR_ARROW} ➜ '
+
 # zsh-syntax-highlighting must be at the bottom
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

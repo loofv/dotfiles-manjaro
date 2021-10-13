@@ -205,8 +205,8 @@ bar {
 # Startup scripts
 exec_always ~/.custom_scripts/startup
 # exec teams
-exec google-chrome-stable
 exec --no-startup-id picom
+exec --no-startup-id google-chrome-stable
 exec alacritty
 exec_always --no-startup-id autotiling
 
