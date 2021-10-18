@@ -66,17 +66,7 @@ source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
 
 # PROMPT
-function parse_git_branch() {
-    git branch 2> /dev/null | sed -n -e 's/^\* \(.*\)/[\1]/p'
-}
-autoload -U colors && colors
-setopt PROMPT_SUBST
-
-COLOR_DIR="%{$fg[cyan]%}";
-COLOR_GIT="%{$fg_bold[yellow]%}"
-COLOR_ARROW="%(?:%{$fg_bold[green]%}:%{$fg_bold[red]%})"
-
-export PROMPT=' ${COLOR_DIR}%1~ ${COLOR_GIT}$(parse_git_branch)${COLOR_ARROW} ➜ '
+source ~/.zsh_prompt
 
 # zsh-syntax-highlighting must be at the bottom
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
