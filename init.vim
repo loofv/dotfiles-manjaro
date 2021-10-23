@@ -8,6 +8,7 @@
 " ------------------------------------------------
 call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'vimwiki/vimwiki'
 Plug 'pangloss/vim-javascript'
@@ -30,6 +31,7 @@ set incsearch
 set lazyredraw
 set magic
 set showmatch
+set nohlsearch
 " Makes search-and-replace show what is being replaced
 set inccommand=nosplit
 if executable('rg')
@@ -45,6 +47,7 @@ vnoremap Y "+y
 " Splits open at the bottom and right, which is non-retarded, unlike vim defaults.
 set splitbelow splitright
 nnoremap <leader>t :b#<CR>
+set scrolloff=10
 " ------------------------------------------------
 " Formatting and appearance
 " ------------------------------------------------
@@ -83,6 +86,7 @@ let mapleader = " "
 let g:mapleader = " "
 " Search files in all subdirectories with FZF
 nnoremap <leader>ff :FZF<CR>
+nnoremap <leader>rg :Rg<CR>
 nnoremap <leader>nt :NERDTree<CR>
 " View current buffers
 nnoremap <leader>bb :Buffers<CR>
