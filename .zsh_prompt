@@ -1,21 +1,26 @@
 #---------- PROMPT ----------#
-# Git branch
-function parse_git_branch() {
-    git branch 2> /dev/null | sed -n -e 's/^\* \(.*\)/[\1]/p'
+# Git
+autoload -Uz vcs_info
+zstyle ':vcs_info:*' enable git
+precmd() {
+    vcs_info
+    # Formats is what vcs_info_msg_0_ returns
+    # %b = branch, %c = staged changes, %u = unstaged changes
+    local formats="%{$reset_color%}%{$fg[yellow][%b%c%u$fg[yellow]]%{$reset_color%}"
+    zstyle ':vcs_info:*:*' formats           $formats
+    zstyle ':vcs_info:*:*' check-for-changes true
+    zstyle ':vcs_info:*:*' stagedstr         "%{${fg[green]}%}*"
+    zstyle ':vcs_info:*:*' unstagedstr       "%{${fg[red]}%}*"
 }
-
-# Settings
 setopt PROMPT_SUBST
+# Colors
+autoload -U colors && colors
+DIR="%{$fg[cyan]%1~";
+ARROW="%(?:%{$fg_bold[green]%}:%{$fg_bold[red]%})➜"
+
+PS1=' ${DIR} ${vcs_info_msg_0_} ${ARROW} %{$reset_color%}'
+
 # Enable changing completion
 autoload -Uz compinit && compinit
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
 zstyle ':completion:*' menu select
-
-# Colors
-autoload -U colors && colors
-
-COLOR_DIR="%{$fg[cyan]%}";
-COLOR_GIT="%{$fg_bold[yellow]%}"
-COLOR_ARROW="%(?:%{$fg_bold[green]%}:%{$fg_bold[red]%})"
-
-export PROMPT=' ${COLOR_DIR}%1~ ${COLOR_GIT}$(parse_git_branch)${COLOR_ARROW} ➜ %{$reset_color%}'

@@ -8,6 +8,7 @@
 " ------------------------------------------------
 call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'vimwiki/vimwiki'
 Plug 'pangloss/vim-javascript'
