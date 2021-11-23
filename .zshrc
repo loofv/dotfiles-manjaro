@@ -2,18 +2,6 @@
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH="$HOME/.custom_scripts:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
-# export ZSH="/home/loveh/.oh-my-zsh"
-# ZSH_THEME="loveh-theme"
-# source $ZSH/oh-my-zsh.sh
-
-# Uncomment the following line to automatically update without prompting.
-# DISABLE_UPDATE_PROMPT="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
-
-# Make command line branch load faster
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Read my aliases file
 . ~/.aliases
@@ -28,15 +16,6 @@ HISTFILE=~/.zsh_history
 # Vim mode
 bindkey -v
 export KEYTIMEOUT=1
-
-# Use vim keys in tab complete menu:
-# TODO FIX THESE AFTER REMOVAL OF OHMYZSH
-# If i even need them? do i use them?
-#bindkey -M menuselect 'h' vi-backward-char
-#bindkey -M menuselect 'k' vi-up-line-or-history
-#bindkey -M menuselect 'l' vi-forward-char
-#bindkey -M menuselect 'j' vi-down-line-or-history
-#bindkey -v '^?' backward-delete-char
 
 # Change cursor shape for different vi modes.
 function zle-keymap-select {
