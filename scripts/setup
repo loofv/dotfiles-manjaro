@@ -15,11 +15,8 @@ sh install-ohmyzsh
 sh dirs
 sh symlinks
 
-git config --global core.editor nvim
-git config --global core.pager cat
-
-# Setup github cli auth
-gh auth login
+# Git
+sh git-settings
 
 echo "Install of loveh config finished."
 echo "Alacritty script is not finished yet, so run that manually and fix any problems by hand."

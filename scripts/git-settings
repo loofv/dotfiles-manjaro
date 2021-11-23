@@ -1,0 +1,16 @@
+#!bin/sh
+
+read -p "Please enter your name and last name: " fullName
+read -p "Please enter your email for Github: " email
+
+git config --global user.name "$fullName"
+git config --global user.email $email
+git config --global core.editor nvim
+git config --global core.pager cat
+
+echo "Git setup finished with $fullName $email"
+echo "Also set editor and pager."
+
+# Setup github cli auth
+gh auth login
+echo "Git settings finished."
