@@ -30,3 +30,4 @@ alias displays='xrandr | grep "connected" | cut -f1 -d " "xrandr | grep "connect
 alias bg="feh --bg-scale"
 alias zz="source ~/.zshrc"
 alias cdconf="cd ~/git/dotfiles-manjaro/"
+alias sps="sudo pacman -S"
