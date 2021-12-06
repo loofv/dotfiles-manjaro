@@ -1,0 +1,14 @@
+" Plugins
+set surround
+set commentary
+set NERDTree
+set highlightedyank
+
+set number relativenumber
+set scrolloff=10
+let mapleader=" "
+map <leader>q <Action>(CloseEditor)
+map <leader>nt <Action>(NERDTree)
+map <leader>ff <Action>(SearchEverywhere)
+map <leader>rg <Action>(FindInPath)
+map <leader>fu <Action>(FindUsages)
