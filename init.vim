@@ -113,7 +113,7 @@ set nocompatible
 set hidden
 " Coc
 hi CocUnderline cterm=underline gui=underline
-let g:coc_global_extensions=[ 'coc-tsserver', 'coc-git', 'coc-tslint', 'coc-json', 'coc-css', 'coc-java', 'coc-actions', 'coc-sh', 'coc-xml', 'coc-html', 'coc-vetur']
+let g:coc_global_extensions=[ 'coc-tsserver', 'coc-git', 'coc-tslint', 'coc-json', 'coc-css', 'coc-actions', 'coc-sh', 'coc-xml', 'coc-html', 'coc-vetur']
 " ------------------------------------------------
 " Functions
 " ------------------------------------------------

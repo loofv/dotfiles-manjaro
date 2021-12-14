@@ -7,8 +7,8 @@
 set $mod Mod4
 
 # i3 gaps
-gaps inner 10
-gaps outer 10
+gaps inner 15
+gaps outer 0
 # You can also use any non-zero value if you'd like to have a border
 for_window [class=".*"] border pixel 2
 
@@ -54,7 +54,10 @@ bindsym $mod+Return exec alacritty
 # kill focused window
 bindsym $mod+q kill
 
-bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec rofi -show run
+bindsym $mod+space exec rofi -show window
+
+bindsym $mod+c exec --no-startup-id google-chrome-stable
 
 # Selection printscreen to clipboard
 bindsym --release $mod+p exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
@@ -89,7 +92,7 @@ bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+# bindsym $mod+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -174,10 +177,11 @@ bindsym $mod+minus scratchpad show
 
 # Set shut down, restart and locking features
 bindsym $mod+0 mode "$mode_system"
-set $Locker i3lock && sleep 1
+# set $Locker i3lock
 set $mode_system System (l) lock & suspend, (e) log out of window manager, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
-    bindsym l exec --no-startup-id $Locker && systemctl suspend, mode "default"
+    # bindsym l exec --no-startup-id $Locker && systemctl suspend, mode "default"
+    bindsym l exec --no-startup-id i3lock, mode "default"
     bindsym e exec --no-startup-id i3-msg exit, mode "default"
     bindsym r exec --no-startup-id systemctl reboot, mode "default"
     bindsym Shift+s exec --no-startup-id systemctl poweroff, mode "default"
@@ -194,17 +198,18 @@ bar {
 }
 
 # Startup scripts
-exec_always ~/.custom_scripts/startup
-# exec teams
+exec_always --no-startup-id ~/.custom_scripts/startup
 exec --no-startup-id picom
 exec --no-startup-id google-chrome-stable
-exec alacritty
+exec --no-startup-id alacritty
+exec --no-startup-id teams
+exec --no-startup-id slack
 exec_always --no-startup-id autotiling
 
 # This is to disable dim screen when inactive
-exec_always --no-startup-id xset s off
-exec_always --no-startup-id xset -dpms
-exec_always --no-startup-id xset s noblank
+exec --no-startup-id xset s off
+exec --no-startup-id xset -dpms
+exec --no-startup-id xset s noblank
 
 
 # Start certain programs in certain workspaces on startup

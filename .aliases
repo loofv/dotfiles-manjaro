@@ -1,3 +1,4 @@
+#!bin/sh
 alias gs='git status'
 alias gc='git checkout'
 alias gb='git branch'
@@ -31,3 +32,7 @@ alias bg="feh --bg-scale"
 alias zz="source ~/.zshrc"
 alias cdconf="cd ~/git/dotfiles-manjaro/"
 alias sps="sudo pacman -S"
+# Kanske behöver flytta på -b
+alias vpn="sudo openconnect  -u love.hulterstrom  https://vpn.guardtools.com -b"
+alias cdr="cd ~/git/responder"
+alias cdt="cd ~/git/android-tutorials/udemy1"
