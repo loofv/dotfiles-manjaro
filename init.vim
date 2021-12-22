@@ -19,6 +19,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'morhetz/gruvbox'
 Plug 'preservim/nerdtree'
 Plug 'uiiaoo/java-syntax.vim'
+Plug 'dylanaraps/wal.vim'
 Plug 'rstacruz/vim-closer'
 call plug#end()
 " ------------------------------------------------
@@ -58,10 +59,10 @@ set ignorecase
 " Always show the signcolumn, otherwise it would shift the text each time
 " diagnostics appear/become resolved.
 set signcolumn=yes
-set termguicolors     " enable true colors support
+" set termguicolors     " enable true colors support
 " Theme
-let g:gruvbox_contrast_dark = 'hard'
-colorscheme gruvbox
+" let g:gruvbox_contrast_dark = 'hard'
+colorscheme wal
 filetype plugin indent on
 syntax on
 " Hide ugly grey bar to the left
@@ -140,7 +141,7 @@ augroup autocommands
 	" Automatically deletes all trailing whitespace when saving.
 	autocmd BufWritePre * %s/\s\+$//e
     " Automatically do Java imports when saving the file
-    autocmd BufWritePre *.java call CocAction('runCommand', 'editor.action.organizeImport')
+    " autocmd BufWritePre *.java call CocAction('runCommand', 'editor.action.organizeImport')
 	" Automatically run source on this file after it has been edited to load changes
 	autocmd! bufwritepost .config/nvim/init.vim source %
 augroup END

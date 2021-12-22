@@ -44,6 +44,9 @@ export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow -g "!**/{bu
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
 
+# Pywal
+(cat ~/.cache/wal/sequences &)
+
 # PROMPT
 source ~/.zsh_prompt
 
