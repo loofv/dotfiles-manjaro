@@ -32,3 +32,6 @@ map <leader>ra <Action>(android.deploy.ApplyChanges)
 " TODO add
 " navigera tabs
 " splits?
+set clipboard+=ideaput
+set clipboard+=unnamedplus
+

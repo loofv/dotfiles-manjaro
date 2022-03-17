@@ -10,6 +10,7 @@ alias gsa='git stash apply'
 alias gss='git stash save'
 alias gsl='git stash list'
 alias gcp='git cherry-pick'
+alias grs='git restore --staged'
 alias gk='gitk &'
 alias ga='git add . && git status'
 alias gpdo='git push --delete origin'
@@ -34,5 +35,5 @@ alias cdconf="cd ~/git/dotfiles-manjaro/"
 alias sps="sudo pacman -S"
 # Kanske behöver flytta på -b
 alias vpn="sudo openconnect  -u love.hulterstrom  https://vpn.guardtools.com -b"
-alias cdr="cd ~/git/responder"
-alias cdt="cd ~/git/android-tutorials/udemy1"
+alias cdr="cd ~/git/com.guardtools.responder"
+alias cdt="cd ~/git/jstutorial"

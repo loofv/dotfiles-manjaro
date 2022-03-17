@@ -4,8 +4,8 @@ setxkbmap -option caps:swapescape
 xset r rate 220 45
 # Monitor setup
 # Office
-sh ~/.screenlayout/office.sh
+# sh ~/.screenlayout/office.sh
 # Home
-# sh ~/.screenlayout/work-computer.sh
+sh ~/.screenlayout/work-computer.sh
 # Set wallpaper
 feh --bg-scale ~/Downloads/china-street-2560×1600.jpg
