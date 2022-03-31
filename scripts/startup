@@ -1,8 +1,9 @@
-# !bin/sh
+# !bin/bash
 
 setxkbmap -option caps:swapescape
 xset r rate 220 45
 # Monitor setup, uncomment this line for main computer.
-# xrandr --output eDP-1 --off --output DP-1 --off --output DP-2 --off --output DP-3 --primary --mode 2560x1440 -r 144 --pos 1920x0 --rotate normal
+xrandr --output DP-0 --off --output DP-1 --off --output DP-2 --mode 2560x1440 --pos 2560x0 --rotate normal -r 144 --output DP-3 --off --output HDMI-0 --off --output DP-4 --mode 2560x1600 --pos 0x0 --rotate normal -r 165
 # Set wallpaper
-# feh --bg-scale ~/Downloads/winter-sunset-2-2560×1440.jpg
+feh --bg-scale ~/Downloads/glass-hex-sphere-live-version-in-comments-2560×1600.jpg
+

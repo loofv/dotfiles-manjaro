@@ -16,6 +16,11 @@ Plug 'leafgarland/typescript-vim'
 Plug 'ianks/vim-tsx'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+
+Plug 'Quramy/vim-js-pretty-template'
+Plug 'jiangmiao/auto-pairs'
+Plug 'vim-syntastic/syntastic'
+
 Plug 'morhetz/gruvbox'
 Plug 'preservim/nerdtree'
 Plug 'uiiaoo/java-syntax.vim'
