@@ -44,6 +44,7 @@ export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow -g "!**/{bu
 
 # Automatically add fzf key bindings to .zshrc
 # source /usr/share/fzf/key-bindings.zsh
+/usr/local/opt/fzf/install
 
 # PROMPT
 source ~/.zsh_prompt
