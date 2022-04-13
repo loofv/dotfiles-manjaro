@@ -19,6 +19,9 @@ HISTFILE=~/.zsh_history
 bindkey -v
 export KEYTIMEOUT=1
 
+# Fix bug on mac where back button doesnt delete text after going to normal then insert
+bindkey "^?" backward-delete-char
+
 # Change cursor shape for different vi modes.
 function zle-keymap-select {
   if [[ ${KEYMAP} == vicmd ]] ||
