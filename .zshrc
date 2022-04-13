@@ -1,5 +1,6 @@
 # Constants
 export JAVA_HOME=$(/usr/libexec/java_home -v 17)
+launchctl setenv JAVA_HOME /Library/Java/JavaVirtualMachines/zulu/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH="$HOME/.custom_scripts:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
@@ -44,7 +45,7 @@ export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow -g "!**/{bu
 
 # Automatically add fzf key bindings to .zshrc
 # source /usr/share/fzf/key-bindings.zsh
-/usr/local/opt/fzf/install
+# /usr/local/opt/fzf/install
 
 # PROMPT
 source ~/.zsh_prompt
