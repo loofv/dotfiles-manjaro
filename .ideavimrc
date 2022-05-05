@@ -10,6 +10,8 @@ set highlightedyank
 
 set number relativenumber
 set scrolloff=10
+" set incsearch
+set ignorecase
 let mapleader=" "
 map <leader>q <Action>(CloseEditor)
 map <leader>nt :NERDTree

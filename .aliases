@@ -36,4 +36,5 @@ alias sudo="sudo "
 alias cda="cd ~/repo/mobileapp-android"
 alias cdi="cd ~/repo/mobileapp-ios"
 alias cdf="cd ~/repo/fps"
-
+alias cpbfy="sh ~/change-to-BFY-config-settings.sh"
+alias cpzur="sh ~/change-to-ZUR-config-settings.sh"
