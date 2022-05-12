@@ -4,8 +4,9 @@ alias gb='git branch'
 alias gl='git log -3'
 alias gf='git fetch'
 alias gp='git pull'
+alias gd='git diff'
 alias gbsu='git branch --set-upstream-to='
-alias gsa='git stash apply'
+alias gsa='sh ~/sta.sh'
 alias gss='git stash save'
 alias gsl='git stash list'
 alias gcp='git cherry-pick'
@@ -32,9 +33,12 @@ alias zz="source ~/.zshrc"
 alias cdconf="cd ~/git/dotfiles-manjaro/"
 alias sps="sudo pacman -S"
 alias sudo="sudo "
+alias ls="ls -lA"
 
 alias cda="cd ~/repo/mobileapp-android"
 alias cdi="cd ~/repo/mobileapp-ios"
 alias cdf="cd ~/repo/fps"
 alias cpbfy="sh ~/change-to-BFY-config-settings.sh"
 alias cpzur="sh ~/change-to-ZUR-config-settings.sh"
+
+
