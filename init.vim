@@ -6,6 +6,7 @@
 " Vim plug
 " Skip auto install, make sure you install via Nvim instructions and not Vim.
 " ------------------------------------------------
+let g:ale_disable_lsp = 1
 call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-surround'
 Plug 'fladson/vim-kitty'
@@ -21,6 +22,9 @@ Plug 'morhetz/gruvbox'
 Plug 'preservim/nerdtree'
 Plug 'uiiaoo/java-syntax.vim'
 Plug 'rstacruz/vim-closer'
+Plug 'dense-analysis/ale'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 " ------------------------------------------------
 " Search (SK stuff)
@@ -103,6 +107,8 @@ set clipboard+=unnamedplus
 " ------------------------------------------------
 " Plugin related settings
 " ------------------------------------------------
+" Set this. Airline will handle the rest.
+let g:airline#extensions#ale#enabled = 1
 "  Let nerdtree see hidden files, dotfiles etc.
 let NERDTreeShowHidden=1
 " Some servers have issues with backup files, see #649.
@@ -114,7 +120,7 @@ set nocompatible
 set hidden
 " Coc
 hi CocUnderline cterm=underline gui=underline
-let g:coc_global_extensions=[ 'coc-tsserver', 'coc-git', 'coc-tslint', 'coc-json', 'coc-css', 'coc-java', 'coc-actions', 'coc-sh', 'coc-xml', 'coc-html', 'coc-vetur']
+" let g:coc_global_extensions=[ 'coc-tsserver', 'coc-git', 'coc-tslint', 'coc-json', 'coc-css', 'coc-java', 'coc-actions', 'coc-sh', 'coc-xml', 'coc-html', 'coc-vetur']
 let g:coc_node_path = '/usr/local/bin/node'
 " ------------------------------------------------
 " Functions

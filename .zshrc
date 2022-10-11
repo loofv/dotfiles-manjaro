@@ -1,6 +1,6 @@
 # Constants
-export JAVA_HOME=$(/usr/libexec/java_home -v 17)
-launchctl setenv JAVA_HOME /Library/Java/JavaVirtualMachines/zulu/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
+export JAVA_HOME=$(/usr/libexec/java_home -v 18)
+launchctl setenv JAVA_HOME /Library/Java/JavaVirtualMachines/zulu/Library/Java/JavaVirtualMachines/zulu-18.jdk/Contents/Home
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH="$HOME/.custom_scripts:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
