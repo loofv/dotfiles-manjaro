@@ -31,3 +31,4 @@ alias vim='nvim'
 alias displays='xrandr | grep "connected" | cut -f1 -d " "xrandr | grep "connected" | cut -f1 -d " "'
 alias bg="feh --bg-scale"
 alias zz="source ~/.zshrc"
+alias v="nvim"
