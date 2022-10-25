@@ -20,7 +20,7 @@ export JAVA_HOME="/usr/lib/jvm/java-18-openjdk"
 # Read my aliases file
 . ~/.aliases
 # Run my login scripts
-. ~/.custom_scripts/startup
+# . ~/.custom_scripts/startup
 
 # Command history
 HISTSIZE=10000
