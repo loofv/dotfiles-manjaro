@@ -5,6 +5,9 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH="$HOME/.custom_scripts:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 
+# export LANG="sv_SE.UTF-8"
+# export LC_ALL="sv_SE.UTF-8"
+
 # Read my aliases file
 . ~/.aliases
 # Run my login scripts
@@ -52,7 +55,19 @@ export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow -g "!**/{bu
 
 # PROMPT
 source ~/.zsh_prompt
+#
+
+
+
+# zstyle ':vcs_info:*' enable git svn
+# precmd() {
+#     vcs_info
+# }
+
+# setopt prompt_subst
+# PROMPT='${vcs_info_msg_0_}%# '
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 # zsh-syntax-highlighting must be at the bottom
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+ # /usr/local/opt/fzf/install

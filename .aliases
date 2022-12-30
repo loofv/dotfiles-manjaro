@@ -35,7 +35,6 @@ alias zz="source ~/.zshrc"
 alias cdconf="cd ~/git/dotfiles-manjaro/"
 alias sps="sudo pacman -S"
 alias sudo="sudo "
-alias ls="ls -lA"
 
 alias cda="cd ~/repo/mobileapp-android"
 alias cdi="cd ~/repo/mobileapp-ios"
