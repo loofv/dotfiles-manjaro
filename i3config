@@ -66,6 +66,7 @@ bindsym $mod+g exec gnome-control-center
 
 #crop-area screenshot by pressing Mod + printscreen
 # bindsym --release $mod+p exec gnome-screenshot -i
+bindsym --release $mod+p exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
 # prova att pipea till xclip? gjorde ingen skillnad :(
 
 # change focus
@@ -203,7 +204,7 @@ bar {
 }
 
 # Startup scripts
-exec ~/.custom_scripts/startup
+exec_always ~/.custom_scripts/startup
 # exec teams
 exec --no-startup-id picom
 exec --no-startup-id google-chrome-stable
@@ -214,6 +215,8 @@ exec_always --no-startup-id autotiling
 exec_always --no-startup-id xset s off
 exec_always --no-startup-id xset -dpms
 exec_always --no-startup-id xset s noblank
+# Blue light filter
+exec_always --no-startup-id redshift -l 57.4849884:12.0834517
 
 
 # Start certain programs in certain workspaces on startup
