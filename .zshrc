@@ -1,5 +1,6 @@
 # Constants
 export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local:$PATH
 export PATH="$HOME/.custom_scripts:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 

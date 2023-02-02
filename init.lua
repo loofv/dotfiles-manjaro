@@ -1,1 +1,0 @@
-/home/loveh/.config/nvim/init.lua
