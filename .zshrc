@@ -27,6 +27,7 @@ export JAVA_HOME="/usr/lib/jvm/java-18-openjdk"
 HISTSIZE=10000
 SAVEHIST=10000
 HISTFILE=~/.zsh_history
+setopt share_history
 
 # Vim mode
 bindkey -v

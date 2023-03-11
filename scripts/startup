@@ -7,5 +7,5 @@ xset r rate 220 45
 # Set wallpaper
 # xrandr --output DP-0 --off --output DP-1 --off --output HDMI-0 --mode 2560x1440 -r 144 --pos 0x0 --rotate normal --output DP-2 --off --output DP-3 --off --output DP-4 --mode 1920x1080 -r 144 --pos 426x1440 --rotate normal --output DP-5 --off --output USB-C-0 --off
 
-feh --bg-scale ~/Downloads/winter-sunset-2-2560×1440.jpg
+feh --bg-fill ~/Downloads/winter-sunset-2-2560×1440.jpg
 sh ~/.screenlayout/kba.sh
