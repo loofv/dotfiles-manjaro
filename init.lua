@@ -10,6 +10,7 @@ end
 require('packer').startup(function(use)
   -- Package manager
   use 'wbthomason/packer.nvim'
+  use 'windwp/nvim-ts-autotag'
 
   use { -- LSP Configuration & Plugins
     'neovim/nvim-lspconfig',
@@ -208,6 +209,13 @@ require('lualine').setup {
   },
 }
 
+-- Lua
+require('onedark').setup {
+    style = 'deep',
+  transparent = true
+}
+require('onedark').load()
+
 -- Enable Comment.nvim
 require('Comment').setup()
 
@@ -392,7 +400,7 @@ local servers = {
   -- rust_analyzer = {},
   -- tsserver = {},
 
-  sumneko_lua = {
+  lua_ls = {
     Lua = {
       workspace = { checkThirdParty = false },
       telemetry = { enable = false },
