@@ -1,9 +1,8 @@
 # !bin/sh
-mkdir -p ~/.config/picom
+# mkdir -p ~/.config/picom
 mkdir -p ~/.config/nvim/colors
-mkdir -p ~/.config/i3
+#mkdir -p ~/.config/i3
 mkdir -p ~/.config/alacritty
 mkdir -p ~/.custom_scripts
-mkdir -p ~/.oh-my-zsh/themes
 
 echo "directories created."
