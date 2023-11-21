@@ -5,4 +5,4 @@ xset r rate 220 45
 # Monitor setup, uncomment this line for main computer.
 sh ~/.screenlayout/first.sh
 # Set wallpaper
-# feh --bg-scale ~/Downloads/winter-sunset-2-2560×1440.jpg
+feh --bg-fill ~/Downloads/wallpapers/tree-with-water.jpg
