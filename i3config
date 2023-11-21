@@ -197,10 +197,10 @@ bar {
 
 # Startup scripts
 exec_always ~/.custom_scripts/startup
-# exec teams
+
 exec --no-startup-id picom
 exec --no-startup-id google-chrome-stable
-exec alacritty
+exec --no-startup-id obsidian
 exec_always --no-startup-id autotiling
 
 # This is to disable dim screen when inactive
